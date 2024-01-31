@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="220mm"
+   height="250mm"
+   viewBox="0 0 220 250"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-2-9-9-1-4-1-21-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-9-9-3-3-3-3-6-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-2-9-9-1-4-1-21-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-9-9-3-3-3-3-6-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-6-7-37-51-4-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-6-0-5-34-14-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-6-7-37-51-4-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-6-0-5-34-14-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-6-7-37-51-4-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-6-0-5-34-14-03" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-6-7-37-51-4-55"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-6-0-5-34-14-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-6-7-37-51-4-55-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-6-0-5-34-14-4-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-2-5-6-6-7-37-51-4-55-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="0.69999999"
+       markerHeight="0.69999999"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-6-08-1-6-0-5-34-14-4-4" />
+    </marker>
+  </defs>
+  <g
+     id="g1"
+     transform="translate(26.999999,82.48438)">
+    <g
+       id="layer1"
+       transform="translate(-21.166277,91.28256)">
+      <path
+         id="rect1-2-3-5-9-459"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 120.66628,-82.75132 h 42 v 12 h -42 z" />
+      <path
+         id="rect1-2-3-5-9-594"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 144.66628,-56.75132 h 42 v 12 h -42 z" />
+      <path
+         id="rect1-2-3-5-9-35"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 122.66628,-40.75129 h 32 v 20 h -32 z" />
+      <path
+         id="rect1-2-3-5-9-53"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 88.666281,-18.75132 h 32.999999 v 12 H 88.666281 Z" />
+      <path
+         id="rect1-2-3-5-9-18"
+         style="fill:#e8c529;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 83.66628,-62.75136 h 42 v 18 h -42 z" />
+      <path
+         id="rect1-2-3-5-9-359"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 21.666277,-54.75132 h 42.000006 v 12 H 21.666277 Z" />
+      <path
+         id="rect1-2-3-5-9-23"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 36.666277,-80.75132 h 42.000004 v 12 H 36.666277 Z" />
+      <path
+         id="rect1-2-3-5-9-163"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 82.676694,-90.78256 h 33.989586 v 16.06247 H 82.676694 Z" />
+      <path
+         id="rect1-2-3-5-9-81-1-9"
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none"
+         d="m 101.90886,-33.54693 h 5.56416 v 6.72639 h -5.56416 z" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-2-9-9-1-4-1-21-1)"
+         d="m 68.666281,-68.75132 v 12 h 12"
+         id="path1-8-0-22-9-8-4-8-2-2-4-9" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-2-9-9-1-4-1-21-0)"
+         d="m 138.66628,-70.75132 v 14 h -10"
+         id="path1-8-0-22-9-8-4-8-2-2-4-8" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-6-7-37-51-4-9)"
+         d="m 100.70818,-74.19117 -0.0419,7.43985"
+         id="path1-8-0-22-1-4-55-5-0-1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-6-7-37-51-4-2)"
+         d="m 104.70818,-44.36067 -0.0419,7.60935"
+         id="path1-8-0-22-1-4-55-5-0-0" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-6-7-37-51-4-5)"
+         d="m 104.66628,-28.75132 -0.0419,6.79585"
+         id="path1-8-0-22-1-4-55-5-0-3" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-6-7-37-51-4-55)"
+         d="m 63.868625,-48.83956 16.421002,0.0419"
+         id="path1-8-0-22-1-4-55-5-0-8" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-6-7-37-51-4-55-5)"
+         d="m 144.66628,-48.79322 -16,0.0419"
+         id="path1-8-0-22-1-4-55-5-0-8-7" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;marker-end:url(#Triangle-2-5-6-6-7-37-51-4-55-9)"
+         d="m 122.66628,-30.75132 -12.01772,0.0419"
+         id="path1-8-0-22-1-4-55-5-0-8-0" />
+    </g>
+  </g>
+</svg>

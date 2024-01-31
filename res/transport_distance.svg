@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64.762711mm"
+   height="77.946732mm"
+   viewBox="0 0 64.762711 77.946732"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="transport_distance.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1037668"
+     inkscape:cx="306.67709"
+     inkscape:cy="149.0351"
+     inkscape:window-width="1687"
+     inkscape:window-height="1417"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-23.950363,-109.04721)"><path
+       style="fill:#e8c529;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       d="m 55.8523,109.54721 v 76.94673"
+       id="path1" /><path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       d="m 24.450363,110.02663 v 29.96368 h 63.762711 v -30.20339"
+       id="path2" /></g></svg>
