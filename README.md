@@ -1,4 +1,4 @@
-# sl_app
+# sl_app V1.0
 ## H7136 Sustainability in Engineering Lab App in MatLab
 
 This program is a gamified simulatation of the results presented in the paper:
