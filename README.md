@@ -1,4 +1,4 @@
-# sl_app V1.0 ![lp_app logo](https://github.com/HenryDore/sl_app/blob/main/res/sl_app_large.svg)
+# ![lp_app logo](./res/sl_app_large.svg) sl_app V1.0 
 ## H7136 Sustainability in Engineering Lab App in MatLab
 
 To Do list:
