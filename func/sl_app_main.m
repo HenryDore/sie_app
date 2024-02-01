@@ -36,7 +36,7 @@ product_multiplier = misc.final_product;
 timing = misc.process_times; % hours to minutes
 
 % [Gas, Wind, Nuclear, Solar]
-px_gas = energy_mix(1)/100;  %unneccesarry
+%px_gas = energy_mix(1)/100;  %gas makes up the deficit from solar
 px_wind = energy_mix(2)/100;
 px_coal2 = energy_mix(3)/100;
 px_nuclear = energy_mix(4)/100;
