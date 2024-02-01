@@ -1,10 +1,14 @@
 # sl_app V1.0
 ## H7136 Sustainability in Engineering Lab App in MatLab
 
+To Do list:
+- Fix summary graphs
+- compute CDP instead of COP for score
+- Estimate process timings more accurately
+
 This program is a gamified simulatation of the results presented in the paper:
 
 Sorgüven E, and Mustafa Ö. *"Energy utilization, carbon dioxide emission, and exergy loss in flavored yogurt production process."* Energy 40, no. 1 (2012): 214-225.
-
 
 The method in the paper is simulated and presented with controls for varying multiple factors including:
 - Energy grid composition

@@ -100,7 +100,8 @@ Grid_Makeup = [Grid_gas Grid_wind Grid_coal2 Grid_nuclear Grid_solar2];
 Gas_Natural_Gas  = gas_source(chemical_database,'Gas_Natural_Gas',{'Natural Gas'},1);
 Gas_Hydrogen = gas_source(chemical_database,'Gas_Hydrogen',{'Hydrogen'},1);
 Gas_Makeup = [Gas_Natural_Gas Gas_Hydrogen];
-Gas_Ratios = [misc.gas_composition 1-misc.gas_composition];
+Gas_Ratios = [1-misc.gas_composition misc.gas_composition];
+FC_data.Gas_CEnC = Gas_Makeup(1,1).CEnC*Gas_Ratios(1) + Gas_Makeup(1,2).CEnC*Gas_Ratios(2);
 
 tic
 
@@ -1518,8 +1519,7 @@ Report.Ex_Row_Names = {...
     'Jam Packing';...
     'Flavoured Yoghurt Mixing';...
     'Flavoured Yoghurt Packing'};
-Results
-%output_report = Results;
+%Results
 output_report = Report;
 output_machine_database = machine_database;
 
@@ -1556,6 +1556,13 @@ timing(7)*60 System_Processes.Yogurt_Filling.Machine_ProcessTime; ];
 
 process_timing_results = process_timing_results /60;
 
+%extra data required for summary, added in FC_data (flowchart data) for
+%CONVENIENCE
+FC_data.Electricity_Inputs = Electricity_Inputs;
+FC_data.System_Processes = System_Processes;
+FC_data.GasSystem_Inputs = GasSystem_Inputs;
+FC_data.Gas_Makeup = Gas_Makeup;
+FC_data.Transport = Transport;
 %% Results Table for Transportation
 
 % Row NAmes
@@ -1647,10 +1654,32 @@ T_CO2 = [...
     Transport.Distribution_to_Shop.Object.CO2...
     ];
 
-%
-Results_T = table(T_Load,T_Type,T_Fuel,T_Distance,T_CExC,T_CEnC,T_CO2,'RowNames',Ex_Row_Names);
+T_num_journeys = [...
+    Transport.Milk_to_Factory.Object.Number_Journey;...
+    Transport.Strawberry_to_JamFactory.Object.Number_Journey;...
+    Transport.SugarBeet_to_SugarFactory.Object.Number_Journey;...
+    Transport.Sugar_to_JamFactory.Object.Number_Journey;...
+    Transport.Jam_to_YogurtFactory.Object.Number_Journey;...
+    Transport.Yogurt_to_Distribution.Object.Number_Journey;...
+    Transport.Distribution_to_Shop.Object.Number_Journey...
+];
 
-Results_T.Properties.VariableNames = {'Load (kg)','Size','Fuel','Distance (km)','CExC (MJ)','CEnC (MJ)','C02'};
+
+T_en_calc = [...
+    Transport.Milk_to_Factory.Object.CO2;...
+    Transport.Strawberry_to_JamFactory.Object.CO2;...
+    Transport.SugarBeet_to_SugarFactory.Object.CO2;...
+    Transport.Sugar_to_JamFactory.Object.CO2;...
+    Transport.Jam_to_YogurtFactory.Object.CO2;...
+    Transport.Yogurt_to_Distribution.Object.CO2;...
+    Transport.Distribution_to_Shop.Object.CO2...
+];
+
+
+%
+Results_T = table(T_Load,T_Type,T_Fuel,T_Distance,T_CExC,T_CEnC,T_CO2,T_num_journeys,T_en_calc,'RowNames',Ex_Row_Names);
+
+Results_T.Properties.VariableNames = {'Load (kg)','Size','Fuel','Distance (km)','CExC (MJ)','CEnC (MJ)','C02','Number of journeys','calculated_cenc'};
 
 %Results_T;
 
@@ -1671,7 +1700,6 @@ transport_totals.CEnC = sum(Results_T{:,6});
 % CO2
 
 %% Script Cleanup
-
 clear Ex_* T_* Total_*
 
 end
