@@ -1,4 +1,4 @@
-<div style="text-align: right"> <a href="/res/sl_app_large.svg"></a> </div>
+<div style="text-align: right"> <img href="/res/sl_app_large.svg"></img> </div>
 
 # sl_app V1.0 
 ## H7136 Sustainability in Engineering Lab App in MatLab
