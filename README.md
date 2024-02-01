@@ -2,8 +2,7 @@
 ## H7136 Sustainability in Engineering Lab App in MatLab
 
 To Do list:
-- Fix summary graphs
-- compute CDP instead of COP for score
+- Check CO2 calculations
 - Estimate process timings more accurately
 
 This program is a gamified simulatation of the results presented in the paper:
