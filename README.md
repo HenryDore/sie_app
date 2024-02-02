@@ -1,6 +1,6 @@
 ![alt text](./res/sl_app_large.svg)
 
-# sl_app V1.0 
+# sl_app V1.1 
 ## H7136 Sustainability in Engineering Lab App in MatLab
 
 To Do list:
