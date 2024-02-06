@@ -36,10 +36,11 @@ product_multiplier = misc.final_product;
 timing = misc.process_times; % hours to minutes
 
 % [Gas, Wind, Nuclear, Solar]
-px_gas = energy_mix(1)/100;  %gas makes up the deficit from solar
+%px_gas = energy_mix(1)/100;  %gas makes up the deficit from solar
 px_wind = energy_mix(2)/100;
 px_coal2 = energy_mix(3)/100;
 px_nuclear = energy_mix(4)/100;
+
 px_solar = energy_mix(5)/100;
 
 %% Define Electricity Grid Timeseries
@@ -56,16 +57,16 @@ solar2 = (px_solar)*ones(1,(24*60/block_length))';
 
 season = misc.season;
 switch season % wind capacity factors from: https://www.carbonbrief.org/uk-wind-power-can-help-meet-peak-winter-demand-study/
-    case "Summer"
+    case 1
         solar2 = solar2 .* solar_coefficients.summer;
         wind = wind .* 0.75;
-    case "Spring"
+    case 2
         solar2 = solar2 .* solar_coefficients.spring;
         wind = wind .* 1;
-    case "Autumn"
+    case 3
         solar2 = solar2 .* solar_coefficients.autumn;
         wind = wind .* 1.25;
-    case "Winter"
+    case 4
         solar2 = solar2 .* solar_coefficients.winter;
         wind = wind .* 1.5;
     otherwise
@@ -73,16 +74,12 @@ end
 
 
 % option to switch makeup of decifit from gas/coal
-if misc.top_up_demand == "gas"
-    gas = ones(1,(24*60/block_length))';
-    gas = gas - wind - coal2 - nuclear - solar2;
-elseif misc.top_up_demand == "coal"
-    coal2 = ones(1,(24*60/block_length))';
-    coal2 = coal2 - wind - gas - nuclear - solar2;
-else
-    %error
-end
-
+if misc.top_up_demand = "gas";
+gas = ones(1,(24*60/block_length))';
+gas = gas - wind - coal2 - nuclear - solar2;
+elseif misc.top_up_demand = "coal";
+gas = ones(1,(24*60/block_length))';
+gas = gas - wind - coal2 - nuclear - solar2;
 T = minutes(1:(24*60/block_length))*(block_length);
 
 % Electricity = (1-(energy_mix(1)/100))*ones(1,(24*60/block_length))'; % Length of one day in 30 minute blocks

@@ -12,6 +12,7 @@ classdef gas_source
         Composition_Fraction    % Fraction of contributions
         Composition_Raw         % Fraction Parts ('Named Values')
         Composition_Energy      % Unit energy of each component
+        Composition_LHV         % lower heating value
         Composition_Exergy      % Unit exergy of each component
         Composition_CO2
         Composition_Mdot        % Mass Flow of each component

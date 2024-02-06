@@ -40,7 +40,7 @@ classdef gas_use
             for i = 1:length(obj.Composition)
                 CExCi(i) = (obj.Requirement*obj.Component_Ratios(i))*obj.Composition(i).CExC; % Give indiviudal mass contribution
                 CEnCi(i) = (obj.Requirement*obj.Component_Ratios(i))*obj.Composition(i).CEnC; % Give indiviudal mass contribution
-                CO2i(i) = (obj.Requirement*obj.Component_Ratios(i))*obj.Composition(i).CO2; % Give indiviudal mass contribution
+                CO2i(i) = (obj.Requirement*obj.Component_Ratios(i))*obj.Composition(i).CO2*obj.Composition(i).CEnC; % Give indiviudal mass contribution
 
             end
 
