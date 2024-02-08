@@ -1,7 +1,7 @@
 ![alt text](./res/slp_app_2_large.svg)
 
 # sl_app V1.2 
-# H7136 Sustainability in Engineering Lab App in MatLab
+H7136 Sustainability in Engineering Lab App in MatLab
 
 ## V1.2 Release Notes:
 - Program Limited to Level 1 for Week 2 of Course
