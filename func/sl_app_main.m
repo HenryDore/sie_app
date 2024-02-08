@@ -1684,7 +1684,6 @@ transport_totals.CEnC = sum(Results_T{:,6});
 % CExC
 % CEnC
 % CO2
-
 %% Script Cleanup
 clear Ex_* T_* Total_*
 

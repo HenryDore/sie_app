@@ -40,24 +40,24 @@ classdef material
 
             end
 
+
             obj.Name = InArg1;                 % Name of material
             obj.Composition_Raw = InArg2;      % Raw components of material
             obj.Composition_Fraction = InArg3;  % Fractions of Raw Components
 
+
             for i = 1:length(obj.Composition_Raw)
 
-                obj.Composition_Energy(i)   =       table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Energy"));
-                obj.Composition_Exergy(i)   =       table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Xch"));
-                obj.Composition_CO2(i)      =       table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CO2"));
-                obj.Composition_LHV(i)      =       table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHV"));
+                obj.Composition_Energy(i) =         table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Energy"));
+                obj.Composition_Exergy(i)   = table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Xch"));
+                obj.Composition_CO2(i)      = table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CO2"));
+                obj.Composition_LHV(i) =         table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHV"));
 
                 if nargin == 4 && length(obj.Composition_Fraction) == 1
-                    
-                    obj.Composition_Exergy(i)   =   table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CExC"));
-                    obj.Composition_Energy(i)   =   table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Energy"));
-                    obj.Composition_CO2(i)      =   table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CO2"));
-                    obj.Composition_LHV(i)      =   table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHV"));
-
+                    obj.Composition_Exergy(i) =         table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CExC"));
+                    obj.Composition_Energy(i) =         table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Energy"));
+                    obj.Composition_CO2(i)   =          table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CO2"));
+                    obj.Composition_LHV(i) =         table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHV"));
                     if obj.Composition_Exergy == 0
                         % Rewrite chemical exergy if an argi product
                         obj.Composition_Exergy(1) =     table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Xch"));
@@ -65,20 +65,20 @@ classdef material
                 end
 
                 obj.Composition_Exergy_Unit{i} =    table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"XchUnit"));
+
                 obj.Composition_Energy_Unit{i} =    table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"EnergyUnit"));
-                obj.Composition_CO2_Unit{i} =       'kg/kg';
-                obj.Composition_LHV_Unit{i} =       table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHVUnit"));
+                obj.Composition_CO2_Unit{i} = 'kg/kg';
+
+                if strcmpi(obj.Composition_Energy_Unit{i},'')
+                    obj.Composition_Energy_Unit{i} =         table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHVUnit"));
+                end
 
                 if strcmpi(obj.Composition_Energy_Unit{i},'')
                     obj.Composition_Energy_Unit{i} = '-';
                 end
 
                 if strcmpi(obj.Composition_Exergy_Unit{i},'')
-                    obj.Composition_Exergy_Unit{i} = '-';
-                end
-
-                if strcmpi(obj.Composition_LHV_Unit{i},'')
-                    obj.Composition_LHV_Unit{i} = '-';
+                    obj.Composition_Energy_Unit{i} = '-';
                 end
 
 
@@ -90,11 +90,9 @@ classdef material
                 obj.Composition_Energy(i+1) = 0;
                 obj.Composition_Exergy(i+1) = 0;
                 obj.Composition_CO2(i+1) = 0;
-                obj.Composition_LHV(i+1) = 0;
                 obj.Composition_Exergy_Unit{i+1} = '-';
                 obj.Composition_Energy_Unit{i+1} = '-';
                 obj.Composition_CO2_Unit{i+1} = '-';
-                obj.Composition_LHV_Unit{i+1} = '-';
             end
 
 
@@ -125,7 +123,6 @@ classdef material
             obj.CExC = sum(obj.Composition_Mdot.*obj.Composition_Exergy);
             obj.CO2 = sum(obj.Composition_Mdot.*obj.Composition_CO2);    % obj.CO2 = CCO2C
             obj.Mdot = sum(obj.Composition_Mdot);
-            obj.LHV = sum(obj.Composition_Mdot.*obj.Composition_LHV);    % obj.CO2 = CCO2C
         end
     end
 end

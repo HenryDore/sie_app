@@ -8,6 +8,7 @@ classdef gas_source
         CEnC
         CExC
         CO2
+        LHV
         Mdot
         Composition_Fraction    % Fraction of contributions
         Composition_Raw         % Fraction Parts ('Named Values')
@@ -19,11 +20,12 @@ classdef gas_source
         Composition_Energy_Unit
         Composition_Exergy_Unit
         Composition_CO2_Unit
+        Composition_LHV_Unit
     end
 
     methods
         function obj = gas_source(M,InArg1,InArg2,InArg3)
-            %   MATERIAL Construct an instance of this class
+            %   GAS SOURCE  Construct an instance of this class
             %   Detailed explanation goes here
 
             % If only a name is defined - it is single species material and
@@ -47,23 +49,18 @@ classdef gas_source
                 obj.CExC = table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CExC"));
                 obj.CEnC = table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Energy"));
                 obj.CO2  = table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"CO2"));
+                obj.LHV  = table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHV"));
 
-                obj.Composition_Energy(i) =         table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Energy"));
-                obj.Composition_Exergy(i) =          table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),'Xch'));
-                obj.Composition_CO2(i) =             table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),'CO2'));
+                obj.Composition_Energy(i)   =  table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"Energy"));
+                obj.Composition_Exergy(i)   =  table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),'Xch'));
+                obj.Composition_CO2(i)      =  table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),'CO2'));
+                obj.Composition_LHV(i)      =  table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHV"));
 
-                if isnan(obj.Composition_Energy(i)) || obj.Composition_Energy(i) == 0
-                    obj.Composition_Energy(i) =      table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHV"));
-                end
+                obj.Composition_Exergy_Unit{i}  =   table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"XchUnit"));
+                obj.Composition_Energy_Unit{i}  =   table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"EnergyUnit"));
+                obj.Composition_CO2_Unit{i}     =   "kg/kg";
+                obj.Composition_LHV_Unit{i}     =   table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHVUnit"));
 
-                obj.Composition_Exergy_Unit{i} =     table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"XchUnit"));
-                obj.Composition_Energy_Unit{i} =     table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"EnergyUnit"));
-                obj.Composition_CO2_Unit{i} = "kg/kg";
-
-
-                if strcmpi(obj.Composition_Energy_Unit{i},'')
-                    obj.Composition_Energy_Unit{i} = table2array(M(strcmpi(M.Material,obj.Composition_Raw{i}),"LHVUnit"));
-                end
 
                 if strcmpi(obj.Composition_Energy_Unit{i},'')
                     obj.Composition_Energy_Unit{i} = '-';
@@ -77,6 +74,9 @@ classdef gas_source
                     obj.Composition_CO2_Unit{i} = '-';
                 end
 
+                if strcmpi(obj.Composition_LHV_Unit{i},'')
+                    obj.Composition_LHV_Unit{i} = '-';
+                end
             end
 
             if sum(obj.Composition_Fraction) ~= 1
@@ -85,38 +85,20 @@ classdef gas_source
                 obj.Composition_Energy(i+1) = 0;
                 obj.Composition_Exergy(i+1) = 0;
                 obj.Composition_CO2(i+1) = 0;
+                obj.Composition_LHV(i+1) = 0;
                 obj.Composition_Exergy_Unit{i+1} = '-';
                 obj.Composition_Energy_Unit{i+1} = '-';
                 obj.Composition_CO2_Unit{i+1} = '-';
+                obj.Composition_LHV_Unit{i+1} = '-';
             end
 
 
         end
-
+        %%
         function obj = materialflowrate(obj,flowrate)
             obj.Mdot = flowrate;
             obj.Composition_Mdot = flowrate*obj.Composition_Fraction;
         end
-
-
-        %         function obj = updatematerial(obj)
-        %             %   updatematerial Updates material properties when called
-        %             %   Detailed explanation goes here
-        %
-        %             if  obj.Mdot > 0
-        %                 obj = materialflowrate(obj,obj.Mdot);
-        %             end
-        %
-        %
-        %             if isempty(obj.Mdot) || isempty(obj.Composition_Mdot)
-        %                 disp(['Error: ',obj.Name,' has 0 kg/s flowrate'])
-        %                 disp('Update flowrate before continuing')
-        %                 return
-        %             end
-        %             obj.CEnC = sum(obj.Composition_Mdot.*obj.Composition_Energy);
-        %             obj.CExC = sum(obj.Composition_Mdot.*obj.Composition_Exergy);
-        %             obj.Mdot = sum(obj.Composition_Mdot);
-        %         end
     end
 end
 
