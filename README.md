@@ -4,6 +4,8 @@
 H7136 Sustainability in Engineering Lab App in MatLab
 
 ## V1.2 Release Notes:
+- Classdefs for CO2e updated
+- Graphing of CO2 improved 
 - Program Limited to Level 1 for Week 2 of Course
 - OUTPUT Score button added to generate score.mat file for verification
 - Cool new logo & title
