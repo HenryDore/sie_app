@@ -1,12 +1,14 @@
-![alt text](./res/sl_app_large.svg)
+![alt text](./res/sl_app_2_large.svg)
 
-# sl_app V1.1 
+# sl_app V1.2 
 ## H7136 Sustainability in Engineering Lab App in MatLab
 
-To Do list:
-- Check CO2 calculations
-- Estimate process timings more accurately
+## V1.2 Release Notes:
+- Program Limited to Level 1 for Week 2 of Course
+- OUTPUT Score button added to generate score.mat file for verification
+- Cool new logo & title
 
+## Description
 This program is a gamified simulatation of the results presented in the paper:
 
 Sorgüven E, and Mustafa Ö. *"Energy utilization, carbon dioxide emission, and exergy loss in flavored yogurt production process."* Energy 40, no. 1 (2012): 214-225.
