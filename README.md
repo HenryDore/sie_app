@@ -1,4 +1,4 @@
-![alt text](./res/sl_app_large.svg)
+![alt text](./res/sl_app_2_large.svg)
 
 # sl_app V1.2 
 ## H7136 Sustainability in Engineering Lab App in MatLab
