@@ -103,8 +103,20 @@ Grid_Makeup = [Grid_gas Grid_wind Grid_coal2 Grid_nuclear Grid_solar2];
 %% Define Gas Supply Composition
 % Leave gas supply as a possible variable for different mixtures
 Gas_Natural_Gas  = gas_source(chemical_database,'Gas_Natural_Gas',{'Natural Gas'},1);
-Gas_Hydrogen = gas_source(chemical_database,'Gas_Hydrogen',{'Hydrogen'},1);
-Gas_Makeup = [Gas_Natural_Gas Gas_Hydrogen];
+
+if misc.hydrogen == "grey"
+Gas_Hydrogen_Grey = gas_source(chemical_database,'Gas_Hydrogen_Grey',{'Hydrogen_Grey'},1);
+Gas_Makeup = [Gas_Natural_Gas Gas_Hydrogen_Grey];
+elseif misc.hydrogen == "blue"
+Gas_Hydrogen_Blue = gas_source(chemical_database,'Gas_Hydrogen_Blue',{'Hydrogen_Blue'},1);
+Gas_Makeup = [Gas_Natural_Gas Gas_Hydrogen_Blue];
+elseif misc.hydrogen == "green"
+Gas_Hydrogen_Green = gas_source(chemical_database,'Gas_Hydrogen_Green',{'Hydrogen_Green'},1);
+Gas_Makeup = [Gas_Natural_Gas Gas_Hydrogen_Green];
+else
+    %fail
+end
+
 Gas_Ratios = [1-misc.gas_composition misc.gas_composition];
 FC_data.Gas_CEnC = Gas_Makeup(1,1).CEnC*Gas_Ratios(1) + Gas_Makeup(1,2).CEnC*Gas_Ratios(2);
 

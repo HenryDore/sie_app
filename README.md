@@ -1,14 +1,13 @@
 ![alt text](./res/slp_app_2_large.svg)
 
-# sl_app V1.2 
+# sl_app V1.3 
 H7136 Sustainability in Engineering Lab App in MatLab
 
-## V1.2 Release Notes:
-- Classdefs for CO2e updated
-- Graphing of CO2 improved 
-- Program Limited to Level 1 for Week 2 of Course
-- OUTPUT Score button added to generate score.mat file for verification
-- Cool new logo & title
+## V1.3 Release Notes:
+- Level 2 implemented
+- New machine definitions
+- Edit individual machine
+- Iproved machine graphing
 
 ## Description
 This program is a gamified simulatation of the results presented in the paper:

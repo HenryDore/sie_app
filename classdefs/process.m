@@ -23,6 +23,7 @@ classdef process
         Machine_EnergyConsumption   % Electricity consumption
         Machine_GasConsumption      % Natural gas consumption (update to 'heat input')
         Machine_RejectRatio         % Rejection ratio of sorting/cleaning type process
+        Machine_CO2e
         
     end
     
@@ -72,6 +73,7 @@ classdef process
             obj.Machine_ProcessRate = machine.ProcessRate;              % kg/hr
             obj.Machine_EnergyConsumption = machine.EnergyConsumption;  % MJ/hr
             obj.Machine_GasConsumption = machine.GasConsumption;  % MJ/hr
+            obj.Machine_CO2e = machine.CO2e; %CO2 efficiency 
         end
         
         
@@ -223,7 +225,16 @@ classdef process
                 Reporting.Work.CO2 =  Reporting.Work.CO2  + varargin{1}.CO2  + varargin{2}.CO2;
                 
             end
-            
+
+            if isempty(obj.Machine_CO2e)
+            %not a machine - do nothing
+            else
+            %multiply work by machine efficiency factor
+            Reporting.Work.CO2 = Reporting.Work.CO2 .* obj.Machine_CO2e;
+            end
+
+        
+
             %             if length(varargin) == 3
             %                 % Flag to determine whether to count inputs/Main (to stop double accounting for intermediate processes)
             %                 for j = 1:length(varargin{3})
