@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="92.578423mm"
+   height="40.880772mm"
+   viewBox="0 0 92.578423 40.880772"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="vehicle_hgv.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1037668"
+     inkscape:cx="277.68546"
+     inkscape:cy="158.09498"
+     inkscape:window-width="1350"
+     inkscape:window-height="1237"
+     inkscape:window-x="1506"
+     inkscape:window-y="121"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-31.750001,-10.847917)">
+    <g
+       id="g21"
+       transform="matrix(0.26458333,0,0,0.26458333,-119.21839,-8.2925756)">
+      <g
+         id="g16"
+         transform="translate(-1638.3981,-511.77798)">
+        <path
+           class="cls-1"
+           d="m 2544.29,711.5 h 12.39 v -42.01 l -27.86,-45.1 c -3.69,-5.97 -10.2,-9.6 -17.22,-9.6 h -30.72 v 97.66"
+           id="path11"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <path
+           class="cls-1"
+           d="m 2554.77,670.12 h -29.99 c -10.72,0 -19.4,-8.69 -19.4,-19.4 v -13.11 h 31.64"
+           id="path12"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <path
+           class="cls-1"
+           d="m 2493.69,711.87 h -54.18 c -0.12,-7.5 -2.51,-14.45 -6.52,-20.19 v -0.15 h 47.89"
+           id="path13"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2518.46"
+           cy="712.45001"
+           r="23.969999"
+           id="circle13"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2518.46"
+           cy="712.45001"
+           r="9.79"
+           transform="rotate(-22.5,2518.4759,712.43629)"
+           id="circle14"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2403.23"
+           cy="712.45001"
+           r="9.79"
+           transform="rotate(-45,2403.2268,712.45086)"
+           id="circle15"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2403.23"
+           cy="712.45001"
+           r="23.969999"
+           id="circle16"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      </g>
+      <g
+         id="g18"
+         transform="translate(-1518.9308,-511.77798)">
+        <circle
+           class="cls-1"
+           cx="2162.74"
+           cy="712.45001"
+           r="9.79"
+           transform="rotate(-76.72,2162.6582,712.47615)"
+           id="circle17"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2162.74"
+           cy="712.45001"
+           r="23.969999"
+           id="circle18"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      </g>
+      <path
+         class="cls-1"
+         d="M 828.4018,74.55202 H 572.7992 v 125.54 h 33.28 c 0,-19.93 16.16,-36.09 36.09,-36.09 h 2.2968 c 18.73,0 33.91,15.18 33.91,33.91 v 2.18 h 50.2658 c 0,-19.31 15.66,-34.97 34.97,-34.97 h 64.79 z"
+         id="path20"
+         sodipodi:nodetypes="ccccsssccscc"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+    </g>
+  </g>
+</svg>

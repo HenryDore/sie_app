@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="49.818394mm"
+   height="31.485035mm"
+   viewBox="0 0 49.818393 31.485035"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="vehicle_car.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1037668"
+     inkscape:cx="171.68481"
+     inkscape:cy="19.478752"
+     inkscape:window-width="1350"
+     inkscape:window-height="1237"
+     inkscape:window-x="393"
+     inkscape:window-y="65"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-59.795829,-47.360417)">
+    <g
+       id="g6"
+       transform="matrix(0.26458333,0,0,0.26458333,59.795829,45.854938)">
+      <line
+         class="cls-1"
+         x1="120.14"
+         y1="98.120003"
+         x2="67.339996"
+         y2="98.120003"
+         id="line1"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      <circle
+         class="cls-1"
+         cx="144.38"
+         cy="98.239998"
+         r="24.24"
+         transform="rotate(-78.44,144.37724,98.237622)"
+         id="circle1"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      <circle
+         class="cls-1"
+         cx="144.38"
+         cy="98.239998"
+         r="9.4499998"
+         transform="rotate(-76.77,144.38606,98.239125)"
+         id="circle2"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      <circle
+         class="cls-1"
+         cx="43.41"
+         cy="98.239998"
+         r="24.24"
+         transform="rotate(-77.83,43.409221,98.235702)"
+         id="circle3"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      <circle
+         class="cls-1"
+         cx="43.41"
+         cy="98.239998"
+         r="9.4499998"
+         transform="rotate(-74.13,43.405758,98.230294)"
+         id="circle4"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      <path
+         class="cls-1"
+         d="M 46.95,49.66 H 12.09 c -5.45,0 -9.88,4.42 -9.88,9.88 v 38.59 h 16.65"
+         id="path4"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      <path
+         class="cls-1"
+         d="M 141.89,49.66 121.94,14.82 C 119.49,10.54 114.93,7.9 110,7.9 H 51.15 c -4.98,0 -9.52,2.84 -11.7,7.32 L 22.7,49.67"
+         id="path5"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      <path
+         class="cls-1"
+         d="m 168.62,98.12 h 17.46 V 66.94 c 0,-9.47 -7.67,-17.14 -17.14,-17.14 H 80.4 C 70.66,49.8 62.77,41.91 62.77,32.17 V 7.75"
+         id="path6"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+    </g>
+  </g>
+</svg>

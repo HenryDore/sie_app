@@ -1,13 +1,13 @@
 ![alt text](./res/slp_app_2_large.svg)
 
-# sl_app V1.3 
+# sl_app V1.4 
 H7136 Sustainability in Engineering Lab App in MatLab
 
-## V1.3 Release Notes:
-- Level 2 implemented
-- New machine definitions
-- Edit individual machine
-- Iproved machine graphing
+## V1.4 Release Notes:
+- Level 3 implemented
+- Transport mostly fixed
+- Process load multiplier to simulate increased product transportation
+- MatLab version checking implemented
 
 ## Description
 This program is a gamified simulatation of the results presented in the paper:

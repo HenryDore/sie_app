@@ -397,21 +397,21 @@ Material.Strawberry_Fertilizer = materialflowrate(Material.Strawberry_Fertilizer
 Material.Strawberry_Microelements = materialflowrate(Material.Strawberry_Microelements,0.023831776 * product_multiplier);
 Material.Strawberry_Pesticides = materialflowrate(Material.Strawberry_Pesticides,0.020026035 * product_multiplier);
 Material.Strawberry_Manure = materialflowrate(Material.Strawberry_Manure,1.05 * product_multiplier);
-Strawberry_Input_flow = Material.Strawberry_Fertilizer.Mdot+Material.Strawberry_Microelements.Mdot+Material.Strawberry_Pesticides.Mdot+Material.Strawberry_Manure.Mdot;
+Strawberry_Input_flow = (Material.Strawberry_Fertilizer.Mdot + Material.Strawberry_Microelements.Mdot + Material.Strawberry_Pesticides.Mdot + Material.Strawberry_Manure.Mdot);
 
 Raw_strawberry_initial_mdot = 31.6 * product_multiplier;
 Material.Growth_Medium = materialflowrate(Material.Growth_Medium,Raw_strawberry_initial_mdot-Strawberry_Input_flow);
 
 % Define Production process
 System_Processes.Strawberries = process('Strawberries Production','Argicultural');
-System_Processes.Strawberries = process_work(System_Processes.Strawberries,Fuel_Agriculture.Strawberry,5.1);
+System_Processes.Strawberries = process_work(System_Processes.Strawberries,Fuel_Agriculture.Strawberry,5.1*product_multiplier);
 System_Processes.Strawberries = process_inputs(System_Processes.Strawberries,[Material.Strawberry_Fertilizer,Material.Strawberry_Microelements,Material.Strawberry_Pesticides,Material.Strawberry_Manure,Material.Growth_Medium]);
 System_Processes.Strawberries = process_outputs(System_Processes.Strawberries,[Material.Strawberries_Raw],[1]);
 [System_Processes.Strawberries,Material.Strawberries_Raw] = process_run(System_Processes.Strawberries,[1],Material.Strawberries_Raw);
 
 % Assume electricity requirement of strawberry production represented in a one day consumption block
 Electricity_Inputs.Strawberries = electricity_use(Grid_Composition,Grid_Makeup);
-Electricity_Inputs.Strawberries = process_electricity_use(Electricity_Inputs.Strawberries,5.17588785/24,24,timing(5)); % Number defined directly
+Electricity_Inputs.Strawberries = process_electricity_use(Electricity_Inputs.Strawberries,(5.17588785/24)* product_multiplier,24,timing(5)); % Number defined directly
 
 % Argicultural use of electricity
 [Report.Raw_Strawberry_Production] = process_analysis(...
@@ -1174,10 +1174,15 @@ FC_data.flav_yogh.poly = round(Material.Yogurt_Bag.Mdot,3,'significant');
 %     Transport.X.Object,...              % Transport Object
 %     Transport.X.Load);                  % Transport Load
 
+%% LOAD MULTIPLIER
+%misc.load_multiplier added, this allows to simulate larger processes
+%without distrubing the mdot rates of the actual CExC/CEnC/CO2 process
+%calculations
+
 %% Milk to Yogurt Factory 
 
 %Transport.Milk_to_Factory.Distance = 100;
-Transport.Milk_to_Factory.Load = Material.Skimmed_Milk.Mdot;     % All skimmed milk to Yogurt Factory (Powder and Culture made at Factory)
+Transport.Milk_to_Factory.Load = Material.Skimmed_Milk.Mdot * misc.load_multiplier;     % All skimmed milk to Yogurt Factory (Powder and Culture made at Factory)
 Transport.Milk_to_Factory.Fuel = material(chemical_database,'Milk_to_Factory',{Transport.Milk_to_Factory.Object.Fuel_Type_Name},[1]);
 
 
@@ -1196,7 +1201,7 @@ Transport.Milk_to_Factory.Object = transport_run(...
 
 
 %%   Strawberry to Jam Factory 
-Transport.Strawberry_to_JamFactory.Load = Material.Strawberries_Cleaned.Mdot;             % in kg
+Transport.Strawberry_to_JamFactory.Load = Material.Strawberries_Cleaned.Mdot * misc.load_multiplier;             % in kg
 Transport.Strawberry_to_JamFactory.Fuel = material(chemical_database,'Strawberry_to_JamFactory',{Transport.Strawberry_to_JamFactory.Object.Fuel_Type_Name},[1]);
 
 Transport.Strawberry_to_JamFactory.Object = transport(...
@@ -1216,7 +1221,7 @@ Transport.Strawberry_to_JamFactory.Object = transport_run(...
 
 %%   Sugar Beet to Sugar Factory 
 %Transport.SugarBeet_to_SugarFactory.Distance = 100;         % in km
-Transport.SugarBeet_to_SugarFactory.Load = Material.SugarBeet_Raw.Mdot;             % in kg
+Transport.SugarBeet_to_SugarFactory.Load = Material.SugarBeet_Raw.Mdot * misc.load_multiplier;             % in kg
 Transport.SugarBeet_to_SugarFactory.Fuel = material(chemical_database,'SugarBeet_to_SugarFactory',{Transport.SugarBeet_to_SugarFactory.Object.Fuel_Type_Name},[1]);
 
 Transport.SugarBeet_to_SugarFactory.Object = transport(...
@@ -1233,7 +1238,7 @@ Transport.SugarBeet_to_SugarFactory.Object = transport_run(...
     Transport.SugarBeet_to_SugarFactory.Load);                  % Transport Load
 %%   Sugar to Jam Factory 
 %Transport.Sugar_to_JamFactory.Distance = 100;         % in km
-Transport.Sugar_to_JamFactory.Load = Material.Sugar_Processed.Mdot + Material.Sugar_bag.Mdot;             % in kg
+Transport.Sugar_to_JamFactory.Load = Material.Sugar_Processed.Mdot * misc.load_multiplier + Material.Sugar_bag.Mdot * misc.load_multiplier;             % in kg
 Transport.Sugar_to_JamFactory.Fuel = material(chemical_database,'Sugar_to_JamFactory',{Transport.Sugar_to_JamFactory.Object.Fuel_Type_Name},[1]);
 
 Transport.Sugar_to_JamFactory.Object = transport(...
@@ -1250,7 +1255,7 @@ Transport.Sugar_to_JamFactory.Object = transport_run(...
     Transport.Sugar_to_JamFactory.Load);                  % Transport Load
 %%   Jam to Yogurt Factory 
 %Transport.Jam_to_YogurtFactory.Distance = 100;         % in km
-Transport.Jam_to_YogurtFactory.Load = Material.Jam_Packed.Mdot;             % in kg
+Transport.Jam_to_YogurtFactory.Load = Material.Jam_Packed.Mdot * misc.load_multiplier;             % in kg
 Transport.Jam_to_YogurtFactory.Fuel = material(chemical_database,'Jam_to_YogurtFactory',{Transport.Sugar_to_JamFactory.Object.Fuel_Type_Name},[1]);
 
 Transport.Jam_to_YogurtFactory.Object = transport(...
@@ -1267,7 +1272,7 @@ Transport.Jam_to_YogurtFactory.Object = transport_run(...
     Transport.Jam_to_YogurtFactory.Load);                  % Transport Load
 %%   Yogurt to Distribution 
 %Transport.Yogurt_to_Distribution.Distance = 100;                                                                    % in km
-Transport.Yogurt_to_Distribution.Load = Material.Yogurt_Packed.Mdot + Material.Yogurt_Bag.Mdot;                     % in kg
+Transport.Yogurt_to_Distribution.Load = Material.Yogurt_Packed.Mdot * misc.load_multiplier + Material.Yogurt_Bag.Mdot * misc.load_multiplier;                     % in kg
 Transport.Yogurt_to_Distribution.Fuel = material(chemical_database,'Yogurt_to_Distribution',{Transport.Yogurt_to_Distribution.Object.Fuel_Type_Name},[1]);
 
 Transport.Yogurt_to_Distribution.Object = transport(...
@@ -1284,7 +1289,7 @@ Transport.Yogurt_to_Distribution.Object = transport_run(...
     Transport.Yogurt_to_Distribution.Load);                  % Transport Load
 %%   Distribution to Shop
 %Transport.Distribution_to_Shop.Distance = 100;         % in km
-Transport.Distribution_to_Shop.Load = Material.Yogurt_Packed.Mdot + Material.Yogurt_Bag.Mdot;             % in kg
+Transport.Distribution_to_Shop.Load = Material.Yogurt_Packed.Mdot * misc.load_multiplier + Material.Yogurt_Bag.Mdot * misc.load_multiplier;             % in kg
 Transport.Distribution_to_Shop.Fuel = material(chemical_database,'Distribution_to_Shop',{Transport.Yogurt_to_Distribution.Object.Fuel_Type_Name},[1]);
 
 Transport.Distribution_to_Shop.Object = transport(...
@@ -1582,6 +1587,7 @@ Ex_Row_Names = {...
     Transport.Distribution_to_Shop.Object.Journey_Name...
     };
 
+
 T_Load = [...
     Transport.Milk_to_Factory.Object.Vehicle_Load;...
     Transport.Strawberry_to_JamFactory.Object.Vehicle_Load;...
@@ -1673,20 +1679,35 @@ T_en_calc = [...
     Transport.Distribution_to_Shop.Object.CO2...
 ];
 
+T_fuel_consumption = [...
+    Transport.Milk_to_Factory.Object.Fuel_Consumption;...
+    Transport.Strawberry_to_JamFactory.Object.Fuel_Consumption;...
+    Transport.SugarBeet_to_SugarFactory.Object.Fuel_Consumption;...
+    Transport.Sugar_to_JamFactory.Object.Fuel_Consumption;...
+    Transport.Jam_to_YogurtFactory.Object.Fuel_Consumption;...
+    Transport.Yogurt_to_Distribution.Object.Fuel_Consumption;...
+    Transport.Distribution_to_Shop.Object.Fuel_Consumption...
+];
+
 
 %
-Results_T = table(T_Load,T_Type,T_Fuel,T_Distance,T_CExC,T_CEnC,T_CO2,T_num_journeys,T_en_calc,'RowNames',Ex_Row_Names);
+Results_T = table(T_Load,T_Type,T_Fuel,T_Distance,T_CExC,T_CEnC,T_CO2,T_num_journeys,T_en_calc,T_fuel_consumption,'RowNames',Ex_Row_Names);
 
-Results_T.Properties.VariableNames = {'Load (kg)','Size','Fuel','Distance (km)','CExC (MJ)','CEnC (MJ)','C02','Number of journeys','calculated_cenc'};
+Results_T.Properties.VariableNames = {'Load (kg)','Size','Fuel','Distance (km)','CExC (MJ)','CEnC (MJ)','C02','Number of journeys','calculated_cenc','Fuel Consumption'};
 
-%Results_T;
-
+%Results_T; 
 transport_results = Results_T;
-transport_totals.Load = sum(Results_T{:,1});
-transport_totals.CO2 = sum(Results_T{:,7});
-transport_totals.CExC = sum(Results_T{:,5});
-transport_totals.CEnC = sum(Results_T{:,6});
 
+transport_totals.Load = sum(Results_T{1:3,1})+Results_T{7,1};
+transport_totals.CO2 = sum(Results_T{1:3,7})+Results_T{7,7};
+transport_totals.CExC = sum(Results_T{1:3,5})+Results_T{7,5};
+transport_totals.CEnC = sum(Results_T{1:3,6})+Results_T{7,6};
+transport_totals.consumption = sum(Results_T{1:3,10})+Results_T{7,10};
+transport_totals.journeys = sum(Results_T{1:3,8})+Results_T{7,8};
+transport_totals.distance = sum(Results_T{1:3,4})+Results_T{7,4};
+
+transport_results
+transport_totals
 %round(FC_data,3,'significant');
 
 % Load 

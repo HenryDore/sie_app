@@ -146,7 +146,7 @@ classdef transport
                 obj.Fuel_CEnC = 0;
                 obj.Fuel_CExC = 0;
                 obj.Fuel_Consumption = 0;
-                obj.CO2emissions = 0.050; % kg/km HEAVILY dependent on grid makeup...  20 wind, 210 natgas, 350 coal
+                obj.CO2emissions = 0.50; % kg/km HEAVILY dependent on grid makeup...  20 wind, 210 natgas, 350 coal
             end
         end
         
@@ -196,8 +196,8 @@ classdef transport
 
 
                 %% WHhere is the distance?
-                obj.CEnC = obj.Battery_Consumption * obj.Distance * 2; %electricity is 1 MJ/MJ CEnc, assume 50% losses
-                obj.CExC = obj.Battery_Consumption * obj.Distance * 4.17; %exergy of electricity bodged in?
+                obj.CEnC = obj.Battery_Consumption * obj.Distance;
+                obj.CExC = obj.Battery_Consumption * obj.Distance * ;
             end
         end
     end

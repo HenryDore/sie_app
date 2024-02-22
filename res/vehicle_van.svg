@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="46.162689mm"
+   height="38.58651mm"
+   viewBox="0 0 46.162689 38.58651"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="vehicle_van.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1037668"
+     inkscape:cx="50.282359"
+     inkscape:cy="363.75436"
+     inkscape:window-width="1350"
+     inkscape:window-height="1237"
+     inkscape:window-x="393"
+     inkscape:window-y="65"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-91.810414,43.65625)">
+    <g
+       id="g11"
+       transform="matrix(0.26458333,0,0,0.26458333,-536.14818,-40.587408)">
+      <g
+         id="g10">
+        <g
+           id="g7">
+          <line
+             class="cls-1"
+             x1="2485.01"
+             y1="109.2"
+             x2="2436.3899"
+             y2="109.2"
+             id="line6"
+             style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+          <path
+             class="cls-1"
+             d="m 2390.27,109.2 h -14.67 l 0.15,-105.0587718 c 0.01,-7.48 6.08,-13.53 13.55,-13.53 h 121.74 c 6.97,0 13.2,4.36 15.58,10.92 L 2545.65,65.54 v 43.66 h -14.85"
+             id="path7"
+             sodipodi:nodetypes="cccsscccc"
+             style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        </g>
+        <circle
+           class="cls-1"
+           cx="2507.97"
+           cy="110.4"
+           r="21.629999"
+           id="circle7"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2507.97"
+           cy="110.4"
+           r="8.8299999"
+           transform="rotate(-80.78,2508.0348,110.34871)"
+           id="circle8"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2413.3999"
+           cy="110.4"
+           r="8.8299999"
+           transform="rotate(-45,2413.4018,110.40626)"
+           id="circle9"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+        <circle
+           class="cls-1"
+           cx="2413.3999"
+           cy="110.4"
+           r="21.629999"
+           id="circle10"
+           style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+      </g>
+      <path
+         class="cls-1"
+         d="m 2545.66,65.54 h -32.8 c -11.35,0 -20.55,-9.2 -20.55,-20.55 v -16.3 h 42.898"
+         id="path10"
+         sodipodi:nodetypes="csscc"
+         style="fill:none;stroke:#1f1f1f;stroke-width:4.42px;stroke-miterlimit:10" />
+    </g>
+  </g>
+</svg>
