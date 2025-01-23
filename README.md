@@ -1,7 +1,7 @@
 ![alt text](./res/slp_app_large.svg)
 
 # sl_app V1.4 
-H7136 Sustainability in Engineering Lab App in MatLab
+H7136 Sustainability in Engineering App in MatLab
 
 ## V1.4 Release Notes:
 - Level 3 implemented
