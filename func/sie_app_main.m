@@ -1,4 +1,4 @@
-function [transport_totals,transport_results,output_report,output_machine_database,Grid_Composition,FC_data,process_timing_results] = sl_app_main(energy_mix,machine_database,chemical_database,Transport,misc)
+function [transport_totals,transport_results,output_report,output_machine_database,Grid_Composition,FC_data,process_timing_results] = sie_app_main(energy_mix,machine_database,chemical_database,Transport,misc)
 
 
 %% TO DO LIST
