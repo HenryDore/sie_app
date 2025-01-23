@@ -1,4 +1,4 @@
-![alt text](./res/logo.svg)
+![alt text](./res/logo_large.svg)
 
 # sie_app V1.4 
 H7136 Sustainability in Engineering App in MatLab
