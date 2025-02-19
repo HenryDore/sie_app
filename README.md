@@ -3,7 +3,7 @@
 # sie_app V1.5 
 H7136 Sustainability in Engineering App in MatLab
 
-## V1.4 Release Notes:
+## V1.5 Release Notes:
 - Added window resizing
 - Fixed "Reset electricity" button not resetting seasons
 
