@@ -1,13 +1,11 @@
 ![alt text](./res/logo_large.svg)
 
-# sie_app V1.4 
+# sie_app V1.5 
 H7136 Sustainability in Engineering App in MatLab
 
 ## V1.4 Release Notes:
-- Level 3 implemented
-- Transport mostly fixed
-- Process load multiplier to simulate increased product transportation
-- MatLab version checking implemented
+- Added window resizing
+- Fixed "Reset electricity" button not resetting seasons
 
 ## Description
 This program is a gamified simulatation of the results presented in the paper:
