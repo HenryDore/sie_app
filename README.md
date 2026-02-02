@@ -1,11 +1,10 @@
 ![alt text](./res/logo_large.svg)
 
-# sie_app V1.5 
+# sie_app V1.6 
 H7136 Sustainability in Engineering App in MatLab
 
-## V1.5 Release Notes:
-- Added window resizing
-- Fixed "Reset electricity" button not resetting seasons
+## V1.6 Release Notes:
+- Updated for MATLAB 2025a
 
 ## Description
 This program is a gamified simulatation of the results presented in the paper:
